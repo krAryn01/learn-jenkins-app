@@ -12,6 +12,7 @@ pipeline {
             steps {
                 sh '''
                     ls -la
+                    whoami
                     npm ci
                     npm run build
                 '''
