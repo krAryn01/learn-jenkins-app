@@ -15,7 +15,7 @@ pipeline {
                     ls -la
                     pwd
                     npm ci
-                    chown -R jenkins:jenkins ./
+                    chown -R 987:987 ./
                     npm run build
                 '''
             }
