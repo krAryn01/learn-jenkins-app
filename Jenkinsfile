@@ -19,4 +19,9 @@ pipeline {
             }
         }
     }
+    post {
+        failure {
+            cleanWs()
+        }
+    }
 }
