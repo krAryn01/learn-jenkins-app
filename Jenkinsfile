@@ -2,6 +2,11 @@ pipeline {
     agent none
 
     stages {
+        stage('Clear WS') {
+            steps {
+                clearWs()
+            }
+        }
         
         stage('Build') {
             agent {
@@ -11,7 +16,6 @@ pipeline {
                 }
             }
             steps {
-                clearWs()
                 sh '''
                     ls -la
                     npm install
