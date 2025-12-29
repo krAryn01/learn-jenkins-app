@@ -1,10 +1,10 @@
 pipeline {
-    agent none
+    agent any
 
     stages {
         stage('Clear WS') {
             steps {
-                sh 'ls -la'
+                cleanWs()
             }
         }
         
