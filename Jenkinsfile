@@ -11,6 +11,7 @@ pipeline {
                 }
             }
             steps {
+                clearWs()
                 sh '''
                     ls -la
                     npm install
@@ -19,9 +20,5 @@ pipeline {
             }
         }
     }
-    post {
-        failure {
-            clearWs()
-        }
-    }
+
 }
