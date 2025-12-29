@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Clear WS') {
             steps {
-                cleanWs()
+                sh 'ls -la'
             }
         }
         
