@@ -13,8 +13,8 @@ pipeline {
                 sh '''
                     ls -la
                     pwd
-                    npm ci
-                    npm run build
+                    npm --version
+                    #npm run build
                 '''
             }
         }
