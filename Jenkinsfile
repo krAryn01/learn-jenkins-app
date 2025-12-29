@@ -15,6 +15,7 @@ pipeline {
                     ls -la
                     pwd
                     npm ci
+                    chown -R jenkins:jenkins ./
                     npm run build
                 '''
             }
