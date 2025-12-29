@@ -12,7 +12,8 @@ pipeline {
             }
             steps {
                 sh '''
-                    npm run build
+                    ls -la
+                    #npm run build
                 '''
             }
         }
