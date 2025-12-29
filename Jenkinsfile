@@ -13,8 +13,8 @@ pipeline {
                 sh '''
                     ls -la
                     npm install
-                    npm run build
                 '''
+                sh 'npm run build'
             }
         }
     }
