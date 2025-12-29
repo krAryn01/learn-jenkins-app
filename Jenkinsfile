@@ -2,12 +2,6 @@ pipeline {
     agent any
 
     stages {
-        stage('Clear WS') {
-            steps {
-                cleanWs()
-            }
-        }
-        
         stage('Build') {
             agent {
                 docker {
@@ -22,6 +16,11 @@ pipeline {
                     npm run build
                 '''
             }
+        }
+    }
+    post {
+        failure {
+            cleanWs()
         }
     }
 
